@@ -10,6 +10,7 @@ function App() {
 		GetTodos();
 	}, []);
 
+	// Fetching the To-do's from the API
 	const GetTodos = () => {
 		fetch(API_BASE + "/todos")
 			.then(res => res.json())
@@ -17,6 +18,7 @@ function App() {
 			.catch(err => console.error("Error: ", err));
 	}
 
+	// Marking the to-do's as complete
 	const completeTodo = async id => {
 		const data = await fetch(API_BASE + '/todo/complete/' + id)
 		.then(res => res.json());
@@ -47,7 +49,7 @@ function App() {
 		setNewTodo("");
 	}
 
-
+	// Deleting to-do's
 	const deleteTodo = async id => {
 		const data = await fetch(API_BASE + "/todo/delete/" + id, {
 			method : "DELETE"
@@ -69,8 +71,8 @@ function App() {
 						<div className="checkbox"></div>
 
 						<div className="text">{ todo.text }</div>
-
-						<div className="delete-todo" onClick={(e)=> {e.stopPropagation(); deleteTodo(todo._id)}}>x</div>
+						
+						<div className="delete-todo" onClick={(e)=> {e.stopPropagation(); deleteTodo(todo._id)}}>x</div> 
 					</div>
 			)) : (
 				<p>You currently have no tasks</p>
