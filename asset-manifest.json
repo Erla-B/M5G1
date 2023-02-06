@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/M5G1/static/css/main.eb65dfd1.css",
+    "main.js": "/M5G1/static/js/main.360475c7.js",
+    "index.html": "/M5G1/index.html",
+    "main.eb65dfd1.css.map": "/M5G1/static/css/main.eb65dfd1.css.map",
+    "main.360475c7.js.map": "/M5G1/static/js/main.360475c7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb65dfd1.css",
+    "static/js/main.360475c7.js"
+  ]
+}
