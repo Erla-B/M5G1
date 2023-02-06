@@ -6,5 +6,5 @@ I made this before the group project started, even though I'm turning it in late
 
 I tried to leave some comments in the code to explain what I am doing but I admit that I'm kind of bad at explaining code. Tried my best!
 
-EDIT AFTER RETURNING
+-- EDIT AFTER RETURNING PROJECT --
 Sorry for kind of cheating, we're not supposed to edit after returning, but I just wanted to say that I realized after turning it in that the live link only works if you are running the server...I guess I would have had to deployed it differently or something for it to be directly usable...sorry!
