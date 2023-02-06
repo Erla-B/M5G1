@@ -47,6 +47,7 @@ app.delete('/todo/delete/:id', async (req, res) => {
 
 // Toggles an item as 'complete'
 app.get('/todo/complete/:id', async (req, res) => {
+    console.log(req.params.id);
     const todo = await Todo.findById(req.params.id);
 
     todo.complete = !todo.complete; // If it's complete then clicking makes it incomplete and vice versa

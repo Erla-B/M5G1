@@ -47,13 +47,14 @@ function App() {
 		setNewTodo("");
 	}
 
-	const deleteTodo = async id => {
-		const data = await fetch(API_BASE + '/todo/delete/' + id, { 
-			method:"DELETE" 
-		}).then(res => res.json());
 
-		setTodos(todos => todos.filter(todo => todo._id !== data.result._id));
-	}
+	const deleteTodo = async id => {
+		const data = await fetch(API_BASE + "/todo/delete/" + id, {
+			method : "DELETE"
+		}).then(res => res.json());
+	
+		setTodos(todos => todos.filter(todo => todo._id !== data._id));
+	  }
 
 	return (
 		<div className="App">
@@ -69,7 +70,7 @@ function App() {
 
 						<div className="text">{ todo.text }</div>
 
-						<div className="delete-todo" onClick={() => deleteTodo(todo._id)}>x</div>
+						<div className="delete-todo" onClick={(e)=> {e.stopPropagation(); deleteTodo(todo._id)}}>x</div>
 					</div>
 			)) : (
 				<p>You currently have no tasks</p>
